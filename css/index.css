@@ -1,0 +1,77 @@
+#radio-container{
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+table{
+    display: block;
+    max-height: 400px;
+    overflow-y: auto;
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+thead, tbody{
+    display: table;
+    width: 100%;
+}
+thead th, tbody td{
+    width: 25%;
+    border-right: 2px solid black;
+    height: 2rem;
+    text-align: start;
+}
+
+tbody tr, thead tr{
+    height: 2.5rem;
+}
+
+tbody tr:nth-child(odd){
+    background-color:rgba(0, 191, 255, 0.15) ;
+}
+
+thead{
+    background-color: rgba(0, 191, 255, 0.6);
+}
+th{
+    font-weight: bolder;
+}
+
+/* .modal{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 3rem;
+    height: 600px;
+    width: 600px;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
+    background-color: rgba(159, 194, 206, 1);
+}
+#profil{
+    display: flex;
+}
+#info-apprenant, #info-label{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#info-label{
+    width: 20%;
+}
+#info-apprenant{
+    align-items: center;
+    width: 60%;
+}
+.space-between{
+    display: flex;
+    justify-content: space-between;
+}
+#closeBtn{
+    position: absolute;
+    padding: 0.5rem;
+    font-weight: bolder;
+    font-size: 2rem;
+    top: 0;
+    right: 0;
+} */
