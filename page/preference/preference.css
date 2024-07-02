@@ -1,0 +1,32 @@
+section form{
+    width: 500px;
+    text-align: center;
+}
+.theme-container, .radio-container{
+    display: flex;
+    align-items: start;
+    padding-bottom: 2rem;
+}
+.radio-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+.theme-container label, .radio-container p {
+    text-align: start;
+    width: 70%;
+}
+.redirection-btn{
+    display: flex;
+    gap: 2rem;
+}
+.redirection-btn .save{
+    font-size: 16px;
+    font-family: 'Times New Roman, Times, serif';
+    background-color: #2E4B20;
+    cursor: pointer;
+}
+.redirection-btn .save:hover{
+    background-color: #7d9e359c;   
+}

@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="preference.css">
     <link rel="stylesheet" href="/css/style.css">
     <title>Preference</title>
-    <script src="preference.js"></script>
 </head>
 <body>
     <main>
@@ -14,12 +13,42 @@
             <img src="/assets/logo.png" alt="logo eni">
             <p>Promo XXXXX</p>
             <ul>
-                <li><a href="/index.html">Accueil</a></li>
-                <li><a href="/page/preference/preference.html">Préférences</a></li>
-                <li><a href="/page/carte/carte.html">Carte</a></li>
-                <li><a href="/page/information/information.html">Informations</a></li>
+                <li class="box-shadow"><a href="/index.html">Accueil</a></li>
+                <li class="box-shadow"><a href="/page/preference/preference.html">Préférences</a></li>
+                <li class="box-shadow"><a href="/page/carte/carte.html">Carte</a></li>
+                <li class="box-shadow"><a href="/page/information/information.html">Informations</a></li>
             </ul>
         </nav>
+        <section class="flex-column">
+            <h1>Préférences du site</h1>
+                <form action="submit" method="POST">
+                    <div class="theme-container">
+                        <label for="select">Selectionnez le thème</label>
+                    <select id="select" name="theme" class="select-container">
+                        <option id="dark" value="dark">Sombre</option>
+                        <option id="light" value="light">Clair</option>                        
+                    </select>
+                    </div>
+                    <div class="radio-container">
+                        <p>Format d'affichage de la liste des apprenants</p>
+                        <div class="radio-content">
+                            <div>
+                                <input type="radio" id="table" name="list-type" value="table">
+                                <label for="radio"> Liste (Table)</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="grid" name="list-type" value="grid">
+                                <label for="radio">Cartes (Grid)</label></div>
+                        </div>
+                    </div>
+                    
+                </form>
+            <div class="redirection-btn">
+                <a href="/index.html" class="btn box-shadow">Retour à ma page d'Accueil</a>
+                <button id="enregistrer" class="btn box-shadow save">Enregistrer</button>
+            </div>
+        </section>
     </main>
+    <script src="/page/preference/preference.js"></script>
 </body>
 </html>
