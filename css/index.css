@@ -1,39 +1,45 @@
-#radio-container{
-    display: flex;
-    justify-content: flex-end;
-    gap: 0.5rem;
+#radio-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
 }
-table{
-    display: block;
-    max-height: 400px;
-    overflow-y: auto;
-    border-collapse: collapse;
-    border: 2px solid black;
+table {
+  display: block;
+  max-height: 400px;
+  overflow-y: auto;
+  border-collapse: collapse;
+  border: 2px solid var(--table-border);
 }
-thead, tbody{
-    display: table;
-    width: 100%;
+thead,
+tbody {
+  display: table;
+  width: 100%;
 }
-thead th, tbody td{
-    width: 25%;
-    border-right: 2px solid black;
-    height: 2rem;
-    text-align: start;
-}
-
-tbody tr, thead tr{
-    height: 2.5rem;
+thead th,
+tbody td {
+  width: 25%;
+  border-right: 2px solid var(--table-border);
+  height: 2rem;
+  text-align: start;
 }
 
-tbody tr:nth-child(odd){
-    background-color:rgba(0, 191, 255, 0.15) ;
+tbody tr,
+thead tr {
+  height: 2.5rem;
 }
 
-thead{
-    background-color: rgba(0, 191, 255, 0.6);
+tbody tr:nth-child(odd) {
+  background-color: var(--table-tr);
 }
-th{
-    font-weight: bolder;
+
+thead {
+  background-color: var(--table-thead);
+}
+th {
+  font-weight: bolder;
+}
+tbody a:hover {
+    color: var(--primary);
 }
 
 /* .modal{

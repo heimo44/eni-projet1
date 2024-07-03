@@ -24,9 +24,11 @@ section form{
 .redirection-btn .save{
     font-size: 16px;
     font-family: 'Times New Roman, Times, serif';
-    background-color: #2E4B20;
+    border: none;
+    background-color: var(--primary);
     cursor: pointer;
+    border-radius: 4px;
 }
 .redirection-btn .save:hover{
-    background-color: #7d9e359c;   
+    background-color: var(--primary-hover);   
 }

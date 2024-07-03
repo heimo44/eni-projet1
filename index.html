@@ -1,77 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Promo D2WM ####</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/index.css">
-    </head>
-    <body>
-        <main>
-            <nav>
-                <img src="assets/logo.png" alt="logo eni">
-                <p>Promo XXXXX</p>
-                <ul>
-                    <li class="box-shadow"><a href="./index.html">Accueil</a></li>
-                    <li class="box-shadow"><a href="./page/preference/preference.html">Préférences</a></li>
-                    <li class="box-shadow"><a href="./page/carte/carte.html">Carte</a></li>
-                    <li class="box-shadow"><a href="./page/information/information.html">Informations</a></li>
-                </ul>
-            </nav>
-            <!-- <div class="modal">
-                <div id="closeBtn">X</div>
-                <div id="profil">
-                    <div id="avatar">x</div>
-                    <div class="space-between">
-                        <div id="info-label">
-                            <div>nom</div>
-                            <div>prenom</div>
-                            <div>ville</div>
-                        </div>
-                        <div id="info-apprenant">
-                            <div>nom</div>
-                            <div>prenom</div>
-                            <div>ville</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="anecdotes">
-                    <p>Anecdotes sur l'apprenant :</p>
-                    <div>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat recusandae beatae suscipit iure sequi facilis.
-                    </div>
-                </div>
-            </div> -->
-            <div>
-                <div id="radio-container">
-                    <p>Type d'affichage </p>
-                    <input type="radio" id="table" name="affichage" value="table">
-                    <label for="list">Liste</label>
-                    <input type="radio" id="grid" name="affichage" value="grid">
-                    <label for="card">Cartes</label>
-                </div>
-                <h1>
-                    Liste des apprenants
-                </h1>
-                <section>
-                    <div id="data"></div>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Nom</th>
-                                <th>Prénom</th>
-                                <th>Ville</th>
-                                <th>&nbsp;</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tbody-apprenants">
-                        </tbody>
-                    </table>
-                </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promo D2WM ####</title>
+    <link rel="stylesheet" href="css/dark-theme.css"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="js/index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img src="assets/logo.png" alt="logo eni" />
+        <p>Promo XXXXX</p>
+        <ul>
+          <li><a href="./index.html">Accueil</a></li>
+          <li>
+            <a href="./page/preference/preference.html">Préférences</a>
+          </li>
+          <li>
+            <a href="./page/carte/carte.html">Carte</a>
+          </li>
+          <li>
+            <a href="./page/information/information.html">Informations</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- <div class="modal">
+        <div id="closeBtn">X</div>
+        <div id="profil">
+          <div id="avatar">x</div>
+          <div class="space-between">
+            <div id="info-label">
+              <div>nom</div>
+              <div>prenom</div>
+              <div>ville</div>
             </div>
-            
-        </main>
-        <script src="js/index.js" defer></script>
-    </body>
+            <div id="info-apprenant">
+              <div>nom</div>
+              <div>prenom</div>
+              <div>ville</div>
+            </div>
+          </div>
+        </div>
+        <div class="anecdotes">
+          <p>Anecdotes sur l'apprenant :</p>
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
+            recusandae beatae suscipit iure sequi facilis.
+          </div>
+        </div>
+      </div> -->
+      <div>
+        <form action="POST" id="radio-container">
+          <p>Type d'affichage</p>
+          <input type="radio" id="table" name="list" value="table" />
+          <label for="table">Liste</label>
+          <input type="radio" id="grid" name="grid" value="grid" />
+          <label for="grid">Cartes</label>
+        </form>
+        <h1>Liste des apprenants</h1>
+        <section>
+          <div id="data"></div>
+          <table id="table">
+            <thead>
+              <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Ville</th>
+                <th>&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-apprenants"></tbody>
+          </table>
+        </section>
+      </div>
+    </main>
+  </body>
 </html>
