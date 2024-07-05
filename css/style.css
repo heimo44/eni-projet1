@@ -6,10 +6,15 @@
 body {
   background-color: var(--bg-color);
 }
-h1, p, span , td, th, label{
-  color: var(--text)
+h1,
+p,
+span,
+td,
+th,
+label {
+  color: var(--text);
 }
-h1{
+h1 {
   text-align: center;
 }
 main {
@@ -32,7 +37,9 @@ nav {
   justify-content: space-between;
   height: 100px;
   padding: 1rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 nav img {
   width: 50px;
@@ -89,23 +96,29 @@ nav ul li:hover {
   align-items: center;
 }
 
-.dark{
+.dark {
   background-color: #151719;
-  }
-  
-.dark h1, .dark p, .dark span, .dark td, .dark th, .dark label{
-    color: #fff
 }
-.dark nav ul li{
-    background-color: #151719;
+
+.dark h1,
+.dark p,
+.dark span,
+.dark td,
+.dark th,
+.dark label,
+.dark a {
+  color: #fff;
 }
-.dark nav li a{
-    color: #fff;
+.dark nav ul li {
+  background-color: #151719;
 }
-.dark nav ul li:hover{
+.dark nav li a {
+  color: #fff;
+}
+.dark nav ul li:hover {
   background-color: #69e0c2;
 }
-.dark .burger span{
+.dark .burger span {
   background-color: #fff;
 }
 
@@ -121,31 +134,31 @@ nav ul li:hover {
     cursor: pointer;
   }
 
-  .burger span{
-      display: block;
-      width: 35px;
-      height: 5px;
-      margin-bottom: 10px;
-      border-radius: 10px;
-      background-color: var(--text);
-      position: relative;
-      transition: all .3s ease-in-out;
+  .burger span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: var(--text);
+    position: relative;
+    transition: all 0.3s ease-in-out;
   }
 
   .burger.open span:nth-child(2) {
-      opacity: 0;
+    opacity: 0;
   }
 
   .burger.open span:nth-child(1) {
-      transform: rotate(45deg);
-      top: 15px;
+    transform: rotate(45deg);
+    top: 15px;
   }
 
   .burger.open span:nth-child(3) {
-      transform: rotate(-45deg);
-      top: -15px;
+    transform: rotate(-45deg);
+    top: -15px;
   }
-  #menu-burger{
+  #menu-burger {
     position: absolute;
     z-index: 100;
     width: 100%;
@@ -154,7 +167,7 @@ nav ul li:hover {
     top: 0;
     transform: translateY(50%);
   }
-  #menu-burger ul{
+  #menu-burger ul {
     overflow: hidden;
     height: 0;
     width: 100%;
@@ -164,7 +177,7 @@ nav ul li:hover {
   #menu-burger li {
     margin: 0;
   }
-  #menu-burger li a{
+  #menu-burger li a {
     text-align: center;
   }
 
@@ -179,9 +192,14 @@ nav ul li:hover {
 }
 
 @media screen and (width < 550px) {
-  
-   th, 
-    td, p, label, thead th, tbody td, ul li, a{
+  th,
+  td,
+  p,
+  label,
+  thead th,
+  tbody td,
+  ul li,
+  a {
     font-size: 12px;
   }
 }

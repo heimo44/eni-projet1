@@ -1,40 +1,60 @@
-import { toggleBurger, setRadioWithLocalStorageData, fetchData } from "../common/service.js";
+import {
+  toggleBurger,
+  setRadioWithLocalStorageData,
+  fetchData,
+} from "../common/service.js";
 
-const lsValue = localStorage.getItem("listType") // Localstorage: liste ou carte
-const radioForm = document.querySelectorAll("#radio-container input[type='radio']")
+const lsValue = localStorage.getItem("listType"); // Localstorage: liste ou carte
+const radioForm = document.querySelectorAll(
+  "#radio-container input[type='radio']"
+);
 const burger = document.querySelector(".burger"); //burger
-const tableContainer = document.getElementById("table")
-const gridContainer = document.getElementById("grid")
-const data = await fetchData()
+const tableContainer = document.getElementById("table");
+const gridContainer = document.getElementById("grid");
+const closeBtn = document.getElementById("close");
+const modalLayer = document.querySelector(".modal-layer");
+const data = await fetchData();
 radioForm.forEach((radio) => {
-  radio.addEventListener('click', () => {
+  radio.addEventListener("click", () => {
     initListType(radio.value);
-    if(radio.value === "table"){
+    if (radio.value === "table") {
       radioForm[0].checked = true;
-      localStorage.setItem("listType", "table")
+      localStorage.setItem("listType", "table");
     } else {
-      radioForm[1].checked = true
-      localStorage.setItem("listType", "grid")
+      radioForm[1].checked = true;
+      localStorage.setItem("listType", "grid");
     }
-  })
+  });
+});
+
+window.init = onInit();
+
+//user event
+const details = document.querySelectorAll(".detail");
+details.forEach((detail) => {
+  detail.addEventListener("click", () => {
+    modalLayer.classList.toggle("active");
+  });
+});
+
+closeBtn.addEventListener("click", () => {
+  modalLayer.classList.remove("active");
+});
+modalLayer.addEventListener('click', () => {
+  modalLayer.classList.remove('active')
 })
 
-//init
-toggleBurger(burger);
-setRadioWithLocalStorageData(radioForm, lsValue);
-getApprenants()
-initListType(lsValue)
 
-function getApprenants() {
+
+//init
+function onInit() {
   const apprenants = data.apprenants;
+  toggleBurger(burger);
+  setRadioWithLocalStorageData(radioForm, lsValue);
+  initListType(lsValue);
   createTable(apprenants);
   openModalOnDetail(apprenants);
-}
-
-if(gridRadio.checked){
-  toggleTypeOfList(gridRadio.value)
-} else {
-  toggleTypeOfList(tableRadio.value)
+  createGrid(apprenants);
 }
 
 function createTable(apprenants) {
@@ -52,6 +72,7 @@ function createTable(apprenants) {
     tdVille.textContent = apprenant.ville;
     tdDetail.appendChild(aDetail).innerHTML = "Detail";
     aDetail.setAttribute("id", `detail-${apprenant.id}`);
+    aDetail.classList.add("detail");
     for (const td of [tdNom, tdPrenom, tdVille, tdDetail]) {
       trElement.appendChild(td);
     }
@@ -59,21 +80,42 @@ function createTable(apprenants) {
   });
 }
 
-function createGrid(apprenants){
+function modalData(apprenants){
 
 }
 
-function toggleTypeOfList(radioValue){
-  console.log(radioValue)
+function createGrid(apprenants) {
+  apprenants.forEach((apprenant) => {
+    const aDetail = document.createElement("a");
+    const pNom = document.createElement("p");
+    const pPrenom = document.createElement("p");
+    const pVille = document.createElement("p");
+    const div = document.createElement("div");
+    const divName = document.createElement("div")
+    const card = gridContainer.appendChild(div);
+    div.classList.add(['flex-column'], ['card']);
+    const nameContainer = card.appendChild(divName)
+    nameContainer.appendChild(pNom)
+    nameContainer.appendChild(pPrenom)
+    card.appendChild(pVille);
+    card.appendChild(aDetail);
+
+    pPrenom.textContent = apprenant.prenom;
+    pNom.textContent = apprenant.nom;
+    pVille.textContent = apprenant.ville;
+    aDetail.innerHTML = "Detail";
+    aDetail.setAttribute("id", `detail-${apprenant.id}`);
+    aDetail.classList.add("detail");
+  });
 }
 
-function initListType(listValue){
-  if(listValue === "table"){
-    gridContainer.classList.remove("grid")
-    tableContainer.classList.add("table")
+function initListType(listValue) {
+  if (listValue === "table") {
+    gridContainer.classList.remove("grid");
+    tableContainer.classList.add("table");
   } else {
-    tableContainer.classList.remove("table")
-    gridContainer.classList.add("grid")
+    tableContainer.classList.remove("table");
+    gridContainer.classList.add("grid");
   }
 }
 

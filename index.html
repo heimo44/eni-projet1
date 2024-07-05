@@ -19,7 +19,7 @@
       }
     </script>
     <header>
-      <nav >
+      <nav>
         <img src="assets/logo.png" alt="logo eni" />
         <p>Promo XXXXX</p>
         <ul>
@@ -36,101 +36,69 @@
         </ul>
         <!-- Small screen-->
         <div class="burger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>  
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <div id="menu-burger">
-            <ul>
-              <li><a href="./index.html">Accueil</a></li>
-              <li>
-                <a href="./page/preference/preference.html">Préférences</a>
-              </li>
-              <li>
-                <a href="./page/carte/carte.html">Carte</a>
-              </li>
-              <li>
-                <a href="./page/information/information.html">Informations</a>
-              </li>
-            </ul>
+          <ul>
+            <li><a href="./index.html">Accueil</a></li>
+            <li>
+              <a href="./page/preference/preference.html">Préférences</a>
+            </li>
+            <li>
+              <a href="./page/carte/carte.html">Carte</a>
+            </li>
+            <li>
+              <a href="./page/information/information.html">Informations</a>
+            </li>
+          </ul>
         </div>
       </nav>
     </header>
     <main>
-      <!-- <div class="modal">
-        <div id="closeBtn">X</div>
-        <div id="profil">
-          <div id="avatar">x</div>
-          <div class="space-between">
-            <div id="info-label">
-              <div>nom</div>
-              <div>prenom</div>
-              <div>ville</div>
-            </div>
-            <div id="info-apprenant">
-              <div>nom</div>
-              <div>prenom</div>
-              <div>ville</div>
+      <div class="modal-layer">
+        <div class="modal flex-column">
+          <div class="profil-modal">
+            <div class="bloc-image"></div>
+            <div class="user-name">
+              <p id="modal-nom"></p>
+              <p id="modal-prenom"></p>
             </div>
           </div>
+          <p id="modal-ville"></p>
+          <button id="close">Fermer</button>
         </div>
-        <div class="anecdotes">
-          <p>Anecdotes sur l'apprenant :</p>
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
-            recusandae beatae suscipit iure sequi facilis.
-          </div>
-        </div>
-      </div> -->
+      </div>
       <div>
         <form id="radio-container">
           <p>Type d'affichage</p>
-          <input type="radio" id="tableRadio" name="list-type" value="table" checked/>
+          <input
+            type="radio"
+            id="tableRadio"
+            name="list-type"
+            value="table"
+            checked
+          />
           <label for="table">Liste</label>
           <input type="radio" id="gridRadio" name="list-type" value="grid" />
           <label for="grid">Cartes</label>
         </form>
         <h1>Liste des apprenants</h1>
         <section>
-            <table id="table">
-                <thead>
-                    <tr>
-                        <th>Nom</th>
-                        <th>Prénom</th>
-                        <th>Ville</th>
-                        <th>&nbsp;</th>
-                    </tr>
-                </thead>
-                <tbody id="tbody-apprenants"></tbody>
-            </table>
-            <div id="grid">
-                <div>
-                    <p>Nom</p>
-                    <p>Prénom</p>
-                    <p>Ville</p>
-                    <a href="#">Details</a>
-                </div><div>
-                    <p>Nom</p>
-                    <p>Prénom</p>
-                    <p>Ville</p>
-                    <a href="#">Details</a>
-                </div><div>
-                    <p>Nom</p>
-                    <p>Prénom</p>
-                    <p>Ville</p>
-                    <a href="#">Details</a>
-                </div><div>
-                    <p>Nom</p>
-                    <p>Prénom</p>
-                    <p>Ville</p>
-                    <a href="#">Details</a>
-                </div><div>
-                    <p>Nom</p>
-                    <p>Prénom</p>
-                    <p>Ville</p>
-                    <a href="#">Details</a>
-                </div>
-            </div>
+          <table id="table">
+            <thead>
+              <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Ville</th>
+                <th>&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-apprenants"></tbody>
+          </table>
+          <div id="grid">
+          </div>
         </section>
       </div>
     </main>
