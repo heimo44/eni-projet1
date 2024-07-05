@@ -20,7 +20,7 @@ h1 {
 main {
   position: relative;
   max-width: 1200px;
-  height: 100vh;
+  min-height: 800px;
   margin: auto;
   padding: 1rem;
 }
@@ -30,8 +30,12 @@ section {
 }
 
 /* nav bar */
+header{
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
 nav {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,6 +44,7 @@ nav {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-color: var(--bg-color);
 }
 nav img {
   width: 50px;
@@ -67,6 +72,9 @@ nav li a {
 nav ul li:hover {
   border-radius: 5px;
   background-color: #69e0c2;
+}
+header + main{
+  padding-top: 150px;
 }
 
 #menu-burger {
@@ -108,6 +116,9 @@ nav ul li:hover {
 .dark label,
 .dark a {
   color: #fff;
+}
+.dark nav{
+  background-color: #151719;
 }
 .dark nav ul li {
   background-color: #151719;

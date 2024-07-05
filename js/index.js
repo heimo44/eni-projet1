@@ -14,6 +14,8 @@ const tableContainer = document.getElementById("table");
 const gridContainer = document.getElementById("grid");
 const closeBtn = document.getElementById("close");
 const modalLayer = document.querySelector(".modal-layer");
+const modalContent = document.querySelector('.modal')
+
 const data = await fetchData();
 radioForm.forEach((radio) => {
   radio.addEventListener("click", () => {
@@ -27,21 +29,26 @@ radioForm.forEach((radio) => {
 });
 
 window.init = onInit();
-console.log(document.getElementById('test').prenom)
 //user event
 const details = document.querySelectorAll(".detail");
 details.forEach((detail) => {
   detail.addEventListener("click", () => {
+    const index = Number(detail.id.replace('detail-','')) -1
+    modalData(data.apprenants[index])
     modalLayer.classList.toggle("active");
+    modalContent.classList.toggle("active");
+
   });
 });
 
 closeBtn.addEventListener("click", () => {
   modalLayer.classList.remove("active");
+  modalContent.classList.remove("active")
 });
 
 modalLayer.addEventListener('click', () => {
   modalLayer.classList.remove('active')
+  modalContent.classList.remove("active")
 })
 
 
@@ -53,7 +60,6 @@ function onInit() {
   setRadioWithLocalStorageData(radioForm, lsValue);
   initListType(lsValue);
   createTable(apprenants);
-  openModalOnDetail(apprenants);
   createGrid(apprenants);
 }
 
@@ -84,9 +90,18 @@ function modalData(apprenant){
   const avatar = document.getElementById('avatar');
   const modalNom = document.getElementById('modal-nom');
   const modalPrenom = document.getElementById('modal-prenom');
-  const ville = document.getElementById('modal-ville')
-
+  const modalVille = document.getElementById('modal-ville')
+  const modalAnecdote = document.getElementById('modal-anecdote')
+  avatar.setAttribute('src', `/assets/${apprenant.avatar}.png`)
   modalNom.textContent = apprenant.nom
+  modalPrenom.textContent = apprenant.prenom
+  modalVille.textContent = apprenant.ville
+  if(apprenant.anecdote){
+    modalAnecdote.textContent = apprenant.anecdote
+  } else {
+    modalAnecdote.textContent = "Aucune donnée"
+  }
+
 
 }
 
@@ -125,9 +140,3 @@ function initListType(listValue) {
   }
 }
 
-function openModalOnDetail(apprenants) {
-  for (let i = 1; i <= apprenants.length; i++) {
-    document.getElementById(`detail-${i}`).style.cssText =
-      "text-decoration: underline; cursor: pointer";
-  }
-}

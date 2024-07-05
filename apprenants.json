@@ -9,7 +9,7 @@
                 "latitude": 47.654250,
                 "longitude": -2.758185
             },
-            "avatar": "default",
+            "avatar": "avatar",
             "anecdote": "Je suis la formation DWWM en alternance dans une agence web de Vannes !"
         },
         {
@@ -21,7 +21,7 @@
                 "latitude": 45.2155556,
                 "longitude": 0.7272222
             },
-            "avatar": null,
+            "avatar": "avatar",
             "anecdote": null
         },
         {
@@ -33,7 +33,7 @@
                 "latitude": 50.397495,
                 "longitude": 3.536986
             },
-            "avatar": "default",
+            "avatar": "avatar",
             "anecdote": "Imbattable au bras de fer"
         },
         {
@@ -45,7 +45,7 @@
                 "latitude": 43.6484985352,
                 "longitude": 3.69839000702
             },
-            "avatar": "default",
+            "avatar": "laurence",
             "anecdote": "Chante du heavy métal et joue du piano"
         },
         {
@@ -57,7 +57,7 @@
                 "latitude": 48.01996873194448,
                 "longitude": -1.6517353311602163
             },
-            "avatar": null,
+            "avatar": "aurore",
             "anecdote": "J'ai vécu environ 2 ans en Australie et j'ai voyagé pendant un et demi"
         },
         {
@@ -69,7 +69,7 @@
                 "latitude": 47.866834,
                 "longitude": -4.222128
             },
-            "avatar": "default",
+            "avatar": "avatar",
             "anecdote": "Organise des festivals"
         },
         {
@@ -81,7 +81,7 @@
                 "latitude": 47.900002,
                 "longitude": -4.28333
             },
-            "avatar": "default",
+            "avatar": "avatar",
             "anecdote": "J'adore mes mangas Animés"
         },
         {
@@ -93,7 +93,7 @@
                 "latitude": 48.919380824417814,
                 "longitude": 2.4093661836344
             },
-            "avatar": null,
+            "avatar": "avatar",
             "anecdote": "J'aime bien la nourriture du Japon et de la Chine"
         },
         {
@@ -105,7 +105,7 @@
                 "latitude": 47.178302,
                 "longitude": -1.644528
             },
-            "avatar": "default",
+            "avatar": "heimo",
             "anecdote": "Champion olympique du lancer de babouche"
         },
         {
@@ -117,7 +117,7 @@
                 "latitude": 43.17113929931049,
                 "longitude": 6.537061432904704
             },
-            "avatar": "default",
+            "avatar": "amandine",
             "anecdote": "Grande passionnée des chats et de l'astronomie, je n'ai pas peur du noir!"
         }
     ]
