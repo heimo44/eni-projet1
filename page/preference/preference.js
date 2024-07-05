@@ -1,4 +1,4 @@
-import { toggleBurger, setRadioWithLocalStorageData } from "../../common/service.js";
+import { toggleBurger, setRadioWithLocalStorageData, initTheme } from "../../common/service.js";
 
 //menu burger
 const burger = document.querySelector(".burger");
@@ -17,7 +17,8 @@ const table = document.getElementById('table')
 //Bouton enregistrer
 document.getElementById('enregistrer').addEventListener('click', savePreference)
 
-//lancement de la fonction
+//lancement des functions à l'initialisation de la page
+initTheme()
 setRadioWithLocalStorageData(listType, getListType)
 getStorage(getThemeLS)
 
@@ -25,7 +26,6 @@ getStorage(getThemeLS)
 function getStorage(lsTheme){
     if(!lsTheme){ // null||undefined
         selectValue.selectedIndex = 1 //set default
-        localStorage.setItem('theme', selectValue.selectedIndex)
     } else {
         selectValue.selectedIndex = Number(localStorage.getItem('theme'))
     }

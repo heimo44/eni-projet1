@@ -55,7 +55,7 @@ nav p {
 }
 nav ul li {
   margin-right: 1rem;
-  background-color: var(--bg-color);
+  background-color: #FFFFFF;
 }
 nav li a {
   display: block;
@@ -66,7 +66,7 @@ nav li a {
 }
 nav ul li:hover {
   border-radius: 5px;
-  background-color: var(--primary-hover);
+  background-color: #69e0c2;
 }
 
 #menu-burger {

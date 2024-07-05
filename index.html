@@ -10,14 +10,6 @@
     <script type="module" src="js/index.js" defer></script>
   </head>
   <body>
-    <script>
-      const lsThemeKey = localStorage.getItem("theme");
-      if (lsThemeKey) {
-        if (lsThemeKey === "0") document.body.classList.add("dark");
-      } else {
-        localStorage.setItem("theme", "1");
-      }
-    </script>
     <header>
       <nav>
         <img src="assets/logo.png" alt="logo eni" />
@@ -60,13 +52,15 @@
       <div class="modal-layer">
         <div class="modal flex-column">
           <div class="profil-modal">
-            <div class="bloc-image"></div>
+            <div class="bloc-image">
+              <img id="avatar" alt="avatar">
+            </div>
             <div class="user-name">
               <p id="modal-nom"></p>
               <p id="modal-prenom"></p>
+              <p id="modal-ville"></p>
             </div>
           </div>
-          <p id="modal-ville"></p>
           <button id="close">Fermer</button>
         </div>
       </div>
