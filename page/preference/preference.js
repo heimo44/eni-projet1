@@ -1,23 +1,33 @@
-let getThemeLS = localStorage.getItem('theme')
-let getListType = localStorage.getItem('listType')
+import { toggleBurger, setRadioWithLocalStorageData } from "../../common/service.js";
+
+//menu burger
+const burger = document.querySelector(".burger");
+toggleBurger(burger);
+
+//localstorgae data
+let getThemeLS = localStorage.getItem('theme') // string : 1 ===light or 0 === dark
+let getListType = localStorage.getItem('listType') // string : grid or table en string
+
+//document data
 let selectValue = document.getElementById("select")
+const listType = document.querySelectorAll("#radio-container input[type='radio']")
 const grid = document.getElementById('grid')
 const table = document.getElementById('table')
 
-getStorage(getThemeLS, getListType)
+//Bouton enregistrer
 document.getElementById('enregistrer').addEventListener('click', savePreference)
 
-function getStorage(lsTheme, lsListType){
-    if(!lsTheme){
-        selectValue.selectedIndex = 1
+//lancement de la fonction
+setRadioWithLocalStorageData(listType, getListType)
+getStorage(getThemeLS)
+
+//recuperer les données du localstorage et set les valeurs default dans le localstorage
+function getStorage(lsTheme){
+    if(!lsTheme){ // null||undefined
+        selectValue.selectedIndex = 1 //set default
         localStorage.setItem('theme', selectValue.selectedIndex)
     } else {
         selectValue.selectedIndex = Number(localStorage.getItem('theme'))
-    }
-    if(!lsListType){
-        localStorage.setItem('listType', grid.value)
-    } else {
-        getListType === "table" ? table.checked = true : grid.checked = true
     }
 }
 
@@ -27,7 +37,13 @@ function savePreference(){
         localStorage.setItem('theme', selectValue.selectedIndex)
         localStorage.setItem('listType', listType)
         alert("Préférence sauvegardée")
+        //reassign new value to getThemeLs and getListType
         getThemeLS = localStorage.getItem('theme')
-        getListType = localStorage.getItem('listType')    
+        getListType = localStorage.getItem('listType')
+        if(getThemeLS === "0") {
+            document.body.classList.add("dark")
+        } else {
+            document.body.classList.remove("dark")
+        }
     }
 }

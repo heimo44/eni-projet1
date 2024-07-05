@@ -1,6 +1,5 @@
 section div {
   width: 100%;
-  padding: 1rem 0;
   gap: 1rem;
 }
 
@@ -28,4 +27,18 @@ section div {
 
 #description-content ul li, .liens-utiles-content ul li, .liens-utiles-content ul li a{
     color: var(--text)
+}
+
+/* informations */
+.dark #description-content, .dark .liens-utiles-content{
+    border-color: #fafbfb;
+}
+.dark #description-content ul li,.dark  .liens-utiles-content ul li,.dark  .liens-utiles-content ul li a{
+    color: #fff;
+}
+
+@media screen and (width < 764px) {
+    section .description-et-liens-container{
+        flex-direction: column;
+    }
 }

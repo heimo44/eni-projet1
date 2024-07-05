@@ -1,14 +1,47 @@
+/* index dark*/
+.dark table{
+    border-color: #81a4be;
+}
+.dark thead th, .dark tbody td{
+    border-color: #81a4be;
+}
+.dark tbody tr:nth-child(odd) {
+    background-color: #202121;
+}
+.dark thead{
+    background-color: #505050;
+}
 #radio-container {
   display: flex;
   justify-content: flex-end;
   gap: 0.5rem;
 }
+h1{
+    padding-bottom: 1rem;
+}
 table {
-  display: block;
+  display: none;
   max-height: 400px;
   overflow-y: auto;
   border-collapse: collapse;
   border: 2px solid var(--table-border);
+} 
+table + div {
+    display: none;
+}
+.table {
+    display: block;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    gap: 1rem;
+}
+#grid > div{
+    width: 170px;
+    height: 120px;
+    border-radius: 10px;
+    background-color: red;
 }
 thead,
 tbody {
@@ -20,7 +53,7 @@ tbody td {
   width: 25%;
   border-right: 2px solid var(--table-border);
   height: 2rem;
-  text-align: start;
+  text-align: center;
 }
 
 tbody tr,

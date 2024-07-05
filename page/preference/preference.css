@@ -27,8 +27,20 @@ section form{
     border: none;
     background-color: var(--primary);
     cursor: pointer;
-    border-radius: 4px;
 }
 .redirection-btn .save:hover{
     background-color: var(--primary-hover);   
+}
+
+@media screen and (width < 550px) {
+    section form {
+        width: auto;
+    }
+    .theme-container, .radio-container{
+        flex-direction: column;
+    }
+    .theme-container label, .radio-container p {
+        width: 100%;
+        padding-bottom: 0.5rem;
+    }
 }
