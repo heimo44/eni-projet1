@@ -4,7 +4,7 @@ import {
   fetchData,
   initTheme,
   navPromo,
-  activeNav
+  activeNav,
 } from "../common/service.js";
 
 const lsValue = localStorage.getItem("listType"); // Localstorage: liste ou carte ou undefined
@@ -16,7 +16,7 @@ const tableContainer = document.getElementById("table");
 const gridContainer = document.getElementById("grid");
 const closeBtn = document.getElementById("close");
 const modalLayer = document.querySelector(".modal-layer");
-const modalContent = document.querySelector('.modal')
+const modalContent = document.querySelector(".modal");
 const data = await fetchData();
 
 radioForm.forEach((radio) => {
@@ -35,8 +35,8 @@ window.init = onInit();
 const details = document.querySelectorAll(".detail");
 details.forEach((detail) => {
   detail.addEventListener("click", () => {
-    const index = Number(detail.id.replace('detail-','')) -1
-    modalData(data.apprenants[index])
+    const index = Number(detail.id.replace("detail-", "")) - 1;
+    modalData(data.apprenants[index]);
     modalLayer.classList.toggle("active");
     modalContent.classList.toggle("active");
   });
@@ -44,28 +44,26 @@ details.forEach((detail) => {
 
 closeBtn.addEventListener("click", () => {
   modalLayer.classList.remove("active");
-  modalContent.classList.remove("active")
+  modalContent.classList.remove("active");
 });
 
-modalLayer.addEventListener('click', () => {
-  modalLayer.classList.remove('active')
-  modalContent.classList.remove("active")
-})
-
+modalLayer.addEventListener("click", () => {
+  modalLayer.classList.remove("active");
+  modalContent.classList.remove("active");
+});
 
 //init
 function onInit() {
   const apprenants = data.apprenants;
-  initTheme()
+  initTheme();
   toggleBurger(burger);
-  navPromo()
+  navPromo();
   setRadioWithLocalStorageData(radioForm, lsValue);
   initListType(lsValue);
   createTable(apprenants);
   createGrid(apprenants);
-  activeNav(window.location.href)
+  activeNav(window.location.href);
 }
-
 
 function createTable(apprenants) {
   apprenants.forEach((apprenant) => {
@@ -90,23 +88,21 @@ function createTable(apprenants) {
   });
 }
 
-function modalData(apprenant){
-  const avatar = document.getElementById('avatar');
-  const modalNom = document.getElementById('modal-nom');
-  const modalPrenom = document.getElementById('modal-prenom');
-  const modalVille = document.getElementById('modal-ville')
-  const modalAnecdote = document.getElementById('modal-anecdote')
-  avatar.setAttribute('src', `/assets/${apprenant.avatar}.png`)
-  modalNom.textContent = apprenant.nom
-  modalPrenom.textContent = apprenant.prenom
-  modalVille.textContent = apprenant.ville
-  if(apprenant.anecdote){
-    modalAnecdote.textContent = apprenant.anecdote
+function modalData(apprenant) {
+  const avatar = document.getElementById("avatar");
+  const modalNom = document.getElementById("modal-nom");
+  const modalPrenom = document.getElementById("modal-prenom");
+  const modalVille = document.getElementById("modal-ville");
+  const modalAnecdote = document.getElementById("modal-anecdote");
+  avatar.setAttribute("src", `/assets/${apprenant.avatar}.png`);
+  modalNom.textContent = apprenant.nom;
+  modalPrenom.textContent = apprenant.prenom;
+  modalVille.textContent = apprenant.ville;
+  if (apprenant.anecdote) {
+    modalAnecdote.textContent = apprenant.anecdote;
   } else {
-    modalAnecdote.textContent = "Aucune donnée"
+    modalAnecdote.textContent = "Aucune donnée";
   }
-
-
 }
 
 function createGrid(apprenants) {
@@ -116,12 +112,12 @@ function createGrid(apprenants) {
     const pPrenom = document.createElement("p");
     const pVille = document.createElement("p");
     const div = document.createElement("div");
-    const divName = document.createElement("div")
+    const divName = document.createElement("div");
     const card = gridContainer.appendChild(div);
-    const nameContainer = card.appendChild(divName)
-    div.classList.add(['flex-column'], ['card']);
-    nameContainer.appendChild(pNom)
-    nameContainer.appendChild(pPrenom)
+    const nameContainer = card.appendChild(divName);
+    div.classList.add(["flex-column"], ["card"]);
+    nameContainer.appendChild(pNom);
+    nameContainer.appendChild(pPrenom);
     card.appendChild(pVille);
     card.appendChild(aDetail);
 
@@ -143,4 +139,3 @@ function initListType(listValue) {
     tableContainer.classList.add("table");
   }
 }
-

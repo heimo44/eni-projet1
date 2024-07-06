@@ -1,58 +1,62 @@
-section form{
-    width: 500px;
-    text-align: center;
+section form {
+  width: 500px;
+  text-align: center;
 }
-.theme-container, .radio-container{
-    display: flex;
-    align-items: start;
-    padding-bottom: 2rem;
+.theme-container,
+.radio-container {
+  display: flex;
+  align-items: start;
+  padding-bottom: 2rem;
 }
-.radio-content{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;    
+.radio-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
 }
-.theme-container label, .radio-container p {
-    text-align: start;
-    width: 70%;
+.theme-container label,
+.radio-container p {
+  text-align: start;
+  width: 70%;
 }
-.radio-content div{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+.radio-content div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
-.redirection-btn{
-    display: flex;
-    gap: 2rem;
+.redirection-btn {
+  display: flex;
+  gap: 2rem;
 }
-.redirection-btn .save{
-    font-size: 16px;
-    font-family: 'Times New Roman, Times, serif';
-    border: none;
-    background-color: var(--primary);
-    cursor: pointer;
+.redirection-btn .save {
+  font-size: 16px;
+  font-family: "Times New Roman, Times, serif";
+  border: none;
+  background-color: var(--primary);
+  cursor: pointer;
 }
-.redirection-btn .save:hover{
-    background-color: var(--primary-hover);   
+.redirection-btn .save:hover {
+  background-color: var(--primary-hover);
 }
 
-#enregistrer{
-    color: black;
+#enregistrer {
+  color: black;
 }
 
 @media screen and (width < 550px) {
-    section form {
-        width: auto;
-    }
-    .theme-container, .radio-container{
-        flex-direction: column;
-    }
-    .theme-container label, .radio-container p {
-        width: 100%;
-        padding-bottom: 0.5rem;
-    }
-    .redirection-btn .save{
-        font-size: 14px;
-    }
+  section form {
+    width: auto;
+  }
+  .theme-container,
+  .radio-container {
+    flex-direction: column;
+  }
+  .theme-container label,
+  .radio-container p {
+    width: 100%;
+    padding-bottom: 0.5rem;
+  }
+  .redirection-btn .save {
+    font-size: 14px;
+  }
 }

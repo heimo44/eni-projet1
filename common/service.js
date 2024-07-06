@@ -38,19 +38,19 @@ export function initTheme() {
 }
 
 export function activeNav(url) {
-    if(url.includes("index")){
-      document.getElementById("accueil").classList.add("active-nav");
-      document.getElementById("sm-accueil").classList.add("active-nav");
-    } else if(url.includes("preference")){
-      document.getElementById("preference").classList.add("active-nav");
-      document.getElementById("sm-preference").classList.add("active-nav");
-    }else if(url.includes("carte")){
-      document.getElementById("carte").classList.add("active-nav");
-      document.getElementById("sm-carte").classList.add("active-nav");
-    }else if(url.includes("information")){
-      document.getElementById("information").classList.add("active-nav");
-      document.getElementById("sm-information").classList.add("active-nav");
-    }
+  if (url.includes("index")) {
+    document.getElementById("accueil").classList.add("active-nav");
+    document.getElementById("sm-accueil").classList.add("active-nav");
+  } else if (url.includes("preference")) {
+    document.getElementById("preference").classList.add("active-nav");
+    document.getElementById("sm-preference").classList.add("active-nav");
+  } else if (url.includes("carte")) {
+    document.getElementById("carte").classList.add("active-nav");
+    document.getElementById("sm-carte").classList.add("active-nav");
+  } else if (url.includes("information")) {
+    document.getElementById("information").classList.add("active-nav");
+    document.getElementById("sm-information").classList.add("active-nav");
+  }
 }
 
 export async function navPromo() {

@@ -3,52 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Sauvegardez vos préférences afin d'adapter les pages du site à votre goût.">
-    <link rel="stylesheet" href="/css/light-theme.css">
+    <meta
+      name="description"
+      content="Sauvegardez vos préférences afin d'adapter les pages du site à votre goût."
+    />
+    <link rel="stylesheet" href="/css/light-theme.css" />
     <link rel="stylesheet" href="preference.css" />
     <link rel="stylesheet" href="/css/style.css" />
     <script type="module" src="preference.js" defer></script>
     <title>Preference</title>
   </head>
   <body>
-        <header>
-            <nav>
-                <img src="/assets/logo.png" alt="logo eni" />
-                <p>Promo <span id="promo-name"></span></p>
-                <ul>
-                  <li><a id="accueil" href="/index.html">Accueil</a></li>
-                  <li>
-                    <a id="preference" href="/page/preference/preference.html">Préférences</a>
-                  </li>
-                  <li>
-                    <a id="carte" href="/page/carte/carte.html">Carte</a>
-                  </li>
-                  <li>
-                    <a id="information" href="/page/information/information.html">Informations</a>
-                  </li>
-                </ul>
-                <!-- Small screen-->
-                <div class="burger">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-                <div id="menu-burger">
-                  <ul>
-                    <li><a id="sm-accueil" href="/index.html">Accueil</a></li>
-                    <li>
-                      <a id="sm-preference" href="/page/preference/preference.html">Préférences</a>
-                    </li>
-                    <li>
-                      <a id="sm-carte" href="/page/carte/carte.html">Carte</a>
-                    </li>
-                    <li>
-                      <a id="sm-information" href="/page/information/information.html">Informations</a>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
-          </header>
+    <header>
+      <nav>
+        <img src="/assets/logo.png" alt="logo eni" />
+        <p>Promo <span id="promo-name"></span></p>
+        <ul>
+          <li><a id="accueil" href="/index.html">Accueil</a></li>
+          <li>
+            <a id="preference" href="/page/preference/preference.html"
+              >Préférences</a
+            >
+          </li>
+          <li>
+            <a id="carte" href="/page/carte/carte.html">Carte</a>
+          </li>
+          <li>
+            <a id="information" href="/page/information/information.html"
+              >Informations</a
+            >
+          </li>
+        </ul>
+        <!-- Small screen-->
+        <div class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div id="menu-burger">
+          <ul>
+            <li><a id="sm-accueil" href="/index.html">Accueil</a></li>
+            <li>
+              <a id="sm-preference" href="/page/preference/preference.html"
+                >Préférences</a
+              >
+            </li>
+            <li>
+              <a id="sm-carte" href="/page/carte/carte.html">Carte</a>
+            </li>
+            <li>
+              <a id="sm-information" href="/page/information/information.html"
+                >Informations</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
     <main>
       <section class="flex-column">
         <h1>Préférences du site</h1>
@@ -64,7 +75,13 @@
             <p>Format d'affichage de la liste des apprenants :</p>
             <div class="radio-content">
               <div>
-                <input type="radio" id="table" name="list-type" value="table" checked/>
+                <input
+                  type="radio"
+                  id="table"
+                  name="list-type"
+                  value="table"
+                  checked
+                />
                 <label for="table"> Liste</label>
               </div>
               <div>
@@ -75,12 +92,8 @@
           </div>
         </form>
         <div class="redirection-btn">
-          <a href="/index.html" class="btn"
-            >Retour à ma page d'Accueil</a
-          >
-          <button id="enregistrer" class="btn save">
-            Enregistrer
-          </button>
+          <a href="/index.html" class="btn">Retour à ma page d'Accueil</a>
+          <button id="enregistrer" class="btn save">Enregistrer</button>
         </div>
       </section>
     </main>

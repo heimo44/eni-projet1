@@ -1,27 +1,27 @@
-main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #map {
-    z-index: 0;
+  z-index: 0;
   height: 100vh;
   max-width: 600px;
   width: 100vw;
   max-height: 600px;
 }
-.dark a span{
-    color: black;
+.dark a span {
+  color: black;
 }
 .avatar {
-    padding-right: 0.5rem;
-    height: 50px;
-    width: 50px;
+  padding-right: 0.5rem;
+  height: 50px;
+  width: 50px;
 }
-.flex{
-    display: flex;
-    align-items: center;
+.flex {
+  display: flex;
+  align-items: center;
 }
-footer{
-    text-align: center;
+footer {
+  text-align: center;
 }

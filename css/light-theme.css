@@ -1,14 +1,14 @@
 html {
-    --bg-color:#FFFFFF;
-    --secondary-button: #25282c;
-    --secondary-button-hover:#6e757e;
-    --primary: #21c49c;
-    --primary-hover: #69e0c2;
-    --secondary: #fafbfb;
-    --tertiary: #939ea7;
-    --text: #000;
-    --white: #fff;
-    --table-border: #374550;
-    --table-thead: #c3c1c1;
-    --table-tr: #ececec;
+  --bg-color: #ffffff;
+  --secondary-button: #25282c;
+  --secondary-button-hover: #6e757e;
+  --primary: #21c49c;
+  --primary-hover: #69e0c2;
+  --secondary: #fafbfb;
+  --tertiary: #939ea7;
+  --text: #000;
+  --white: #fff;
+  --table-border: #374550;
+  --table-thead: #c3c1c1;
+  --table-tr: #ececec;
 }
