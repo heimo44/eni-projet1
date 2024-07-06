@@ -15,7 +15,7 @@ const burger = document.querySelector(".burger"); //burger
 const tableContainer = document.getElementById("table");
 const gridContainer = document.getElementById("grid");
 const closeBtn = document.getElementById("close");
-const modalLayer = document.querySelector(".modal-layer");
+const modalLayer = document.querySelector(".modal-bg-layer");
 const modalContent = document.querySelector(".modal");
 const data = await fetchData();
 
