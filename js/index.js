@@ -2,7 +2,9 @@ import {
   toggleBurger,
   setRadioWithLocalStorageData,
   fetchData,
-  initTheme
+  initTheme,
+  navPromo,
+  activeNav
 } from "../common/service.js";
 
 const lsValue = localStorage.getItem("listType"); // Localstorage: liste ou carte ou undefined
@@ -15,8 +17,8 @@ const gridContainer = document.getElementById("grid");
 const closeBtn = document.getElementById("close");
 const modalLayer = document.querySelector(".modal-layer");
 const modalContent = document.querySelector('.modal')
-
 const data = await fetchData();
+
 radioForm.forEach((radio) => {
   radio.addEventListener("click", () => {
     initListType(radio.value);
@@ -37,7 +39,6 @@ details.forEach((detail) => {
     modalData(data.apprenants[index])
     modalLayer.classList.toggle("active");
     modalContent.classList.toggle("active");
-
   });
 });
 
@@ -57,11 +58,14 @@ function onInit() {
   const apprenants = data.apprenants;
   initTheme()
   toggleBurger(burger);
+  navPromo()
   setRadioWithLocalStorageData(radioForm, lsValue);
   initListType(lsValue);
   createTable(apprenants);
   createGrid(apprenants);
+  activeNav(window.location.href)
 }
+
 
 function createTable(apprenants) {
   apprenants.forEach((apprenant) => {

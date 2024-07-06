@@ -73,6 +73,13 @@ nav ul li:hover {
   border-radius: 5px;
   background-color: #69e0c2;
 }
+
+nav ul li .active-nav, .dark nav ul .active-nav{
+  color: black ;
+  border-radius: 5px;
+  background-color: #62d0b4;
+}
+
 header + main{
   padding-top: 150px;
 }
@@ -87,6 +94,10 @@ header + main{
   background-color: var(--secondary-button);
   color: var(--white);
   border-radius: 4px;
+}
+input{
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .btn:hover {
   background-color: var(--secondary-button-hover);
@@ -113,8 +124,7 @@ header + main{
 .dark span,
 .dark td,
 .dark th,
-.dark label,
-.dark a {
+.dark label{
   color: #fff;
 }
 .dark nav{
@@ -213,4 +223,7 @@ header + main{
   a {
     font-size: 12px;
   }
+  .btn{
+    padding: 0.5rem;
+}
 }

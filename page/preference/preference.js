@@ -1,4 +1,4 @@
-import { toggleBurger, setRadioWithLocalStorageData, initTheme } from "../../common/service.js";
+import { toggleBurger, setRadioWithLocalStorageData, initTheme, navPromo, activeNav } from "../../common/service.js";
 
 //menu burger
 const burger = document.querySelector(".burger");
@@ -19,6 +19,8 @@ document.getElementById('enregistrer').addEventListener('click', savePreference)
 
 //lancement des functions à l'initialisation de la page
 initTheme()
+navPromo()
+activeNav(window.location.href)
 setRadioWithLocalStorageData(listType, getListType)
 getStorage(getThemeLS)
 

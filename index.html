@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Promo D2WM ####</title>
+    <meta name="description" content="Retrouvez les apprenants inscrits à la formation D2WM 2024">
+    <title>Accueil</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/light-theme.css" />
     <link rel="stylesheet" href="css/index.css" />
@@ -13,17 +14,17 @@
     <header>
       <nav>
         <img src="assets/logo.png" alt="logo eni" />
-        <p>Promo XXXXX</p>
+        <p>Promo <span id="promo-name"></span></p>
         <ul>
-          <li><a href="./index.html">Accueil</a></li>
+          <li><a id="accueil" href="./index.html">Accueil</a></li>
           <li>
-            <a href="./page/preference/preference.html">Préférences</a>
+            <a id="preference" href="./page/preference/preference.html">Préférences</a>
           </li>
           <li>
-            <a href="./page/carte/carte.html">Carte</a>
+            <a id="carte" href="./page/carte/carte.html">Carte</a>
           </li>
           <li>
-            <a href="./page/information/information.html">Informations</a>
+            <a id="information" href="./page/information/information.html">Informations</a>
           </li>
         </ul>
         <!-- Small screen-->
@@ -34,15 +35,15 @@
         </div>
         <div id="menu-burger">
           <ul>
-            <li><a href="./index.html">Accueil</a></li>
+            <li><a id="sm-accueil" href="./index.html">Accueil</a></li>
             <li>
-              <a href="./page/preference/preference.html">Préférences</a>
+              <a id="sm-preference" href="./page/preference/preference.html">Préférences</a>
             </li>
             <li>
-              <a href="./page/carte/carte.html">Carte</a>
+              <a id="sm-carte" href="./page/carte/carte.html">Carte</a>
             </li>
             <li>
-              <a href="./page/information/information.html">Informations</a>
+              <a id="sm-information" href="./page/information/information.html">Informations</a>
             </li>
           </ul>
         </div>
@@ -78,9 +79,9 @@
             value="table"
             checked
           />
-          <label for="table">Liste</label>
+          <label for="tableRadio">Liste</label>
           <input type="radio" id="gridRadio" name="list-type" value="grid" />
-          <label for="grid">Cartes</label>
+          <label for="gridRadio">Cartes</label>
         </form>
         <h1>Liste des apprenants</h1>
         <section>

@@ -1,4 +1,11 @@
 {
+    "promo": {
+        "nom": "D2WM",
+        "dateDeDebut": "2024/06/03",
+        "dateDeFin": "2025/01/16",
+        "description": "Developpement web et web mobile",
+        "nbApprenants": 10
+    },
     "apprenants": [
         {
             "id": "1",

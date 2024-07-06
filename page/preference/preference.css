@@ -11,11 +11,16 @@ section form{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    
+    gap: 0.5rem;    
 }
 .theme-container label, .radio-container p {
     text-align: start;
     width: 70%;
+}
+.radio-content div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 .redirection-btn{
     display: flex;
@@ -32,6 +37,10 @@ section form{
     background-color: var(--primary-hover);   
 }
 
+#enregistrer{
+    color: black;
+}
+
 @media screen and (width < 550px) {
     section form {
         width: auto;
@@ -42,5 +51,8 @@ section form{
     .theme-container label, .radio-container p {
         width: 100%;
         padding-bottom: 0.5rem;
+    }
+    .redirection-btn .save{
+        font-size: 14px;
     }
 }
